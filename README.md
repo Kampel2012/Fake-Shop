@@ -2,7 +2,9 @@
 
 This project was create with [Create React App](https://github.com/facebook/create-react-app).
 
-### https://kampel2012.github.io/Fake-Shop/
+# https://kampel2012.github.io/Fake-Shop/
+
+## API: https://fakestoreapi.com/docs 
 
 ## Available Scripts
 
