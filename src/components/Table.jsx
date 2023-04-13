@@ -13,7 +13,7 @@ const Table = (props) => {
   if (cards) {
     return (
       <div>
-        <CategoryList classes="mt-5" />
+        <CategoryList classes="mt-5 " />
         <p className="text-3xl text-center py-5">Продукция</p>
         <div className="container grid md:grid-cols-2 lg:grid-cols-3 gap-2">
           {cards.map((pr, i) => (

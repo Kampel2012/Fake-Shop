@@ -14,8 +14,8 @@ const CategoryList = (props) => {
   if (category) {
     return (
       <div className={props.classes}>
-        <div className="flex gap-1">
-          <h2 className="text-2xl">Категории</h2>
+        <div className="flex flex-wrap gap-1">
+          <h2 className="text-2xl w-full">Категории:</h2>
           {category.map((pr, i) => (
             <Category name={pr} key={pr} />
           ))}
