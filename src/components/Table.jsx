@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from './Card';
 import useFetch from './hooks/UseFetch';
+import CategoryList from './Category/CategoryList';
 
 const Table = (props) => {
-  let { data } = useFetch('https://fakestoreapi.com/products');
+  const { data } = useFetch('https://fakestoreapi.com/products');
+  const [cards, setCards] = useState([]);
+  useEffect(() => {
+    setCards(data);
+  }, [data]);
 
-  if (data) {
+  if (cards) {
     return (
       <div>
-        <p className="text-3xl text-center py-5">Продуктусы</p>
+        <CategoryList classes="mt-5" />
+        <p className="text-3xl text-center py-5">Продукция</p>
         <div className="container grid md:grid-cols-2 lg:grid-cols-3 gap-2">
-          {data.map((pr, i) => (
+          {cards.map((pr, i) => (
             <Card
               id={pr.id}
               title={pr.title}

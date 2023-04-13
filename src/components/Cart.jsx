@@ -8,7 +8,7 @@ const Cart = (props) => {
 
   if (data) {
     return (
-      <div>
+      <div className="bg-orange-100">
         <h1 className="text-3xl">Корзина:</h1>
         User id: {data.userId}
         {data.products.map((item, i) => (
@@ -21,7 +21,7 @@ const Cart = (props) => {
               количество в корзине:{' '}
               <span className="font-semibold">{item.quantity}</span>
             </p>
-            <p> id продуктуса: {item.productId} </p>
+            <p> id продукта: {item.productId} </p>
             <MyButton name="Удалить из корзины" />
             <hr />
           </div>

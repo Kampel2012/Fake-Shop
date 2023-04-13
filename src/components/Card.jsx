@@ -36,7 +36,7 @@ const Card = ({ id, title, price, category, description, image }) => {
           <p className="text-right text-2xl text-slate-800 font-bold grow py-3">
             {price} $
           </p>
-          <p className="text-center text-2xl text-sky-700 grow">{title}</p>
+          <p className="text-center text-xl text-sky-700 grow">{title}</p>
           <p className="py-4">{description}</p>
         </div>
       </div>

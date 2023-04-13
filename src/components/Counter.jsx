@@ -9,7 +9,9 @@ const Counter = (props) => {
   }
 
   function dec(params) {
-    setCount(count - 1);
+    if (count >= 1) {
+      setCount(count - 1);
+    }
   }
 
   return (

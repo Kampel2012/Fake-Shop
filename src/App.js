@@ -4,7 +4,7 @@ import Table from './components/Table';
 
 function App() {
   return (
-    <div className="App ">
+    <div className="App">
       <div className="max-w-[1170px] mx-auto">
         <header className="App-header"></header>
         <div className="container mx-auto relative">

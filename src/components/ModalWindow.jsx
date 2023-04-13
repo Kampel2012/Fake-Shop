@@ -17,11 +17,11 @@ const ModalWindow = ({
   return (
     <div>
       <div className="fixed inset-0 bg-black bg-opacity-80 flex flex-col justify-center z-10 w-screen h-screen overflow-hidden  ">
-        <div ref={ref} className="w-[700px] h-[720px] bg-white self-center">
-          <h2 className="text-4xl text-emerald-800 text-center pt-5 pb-3 font-semibold">
+        <div ref={ref} className="w-[700px] bg-white self-center">
+          <h2 className="text-3xl text-emerald-800 text-center pt-5 pb-3 font-semibold mx-12">
             {title}
           </h2>
-          <div className="h-[420px] w-full my-5">
+          <div className="h-[420px] w-full my-5 px-5">
             <img
               src={image}
               alt="Картинка карточки"
@@ -31,7 +31,9 @@ const ModalWindow = ({
           <div className="text-center grow pb-5">
             <p className="text-4xl text-slate-800 font-bold grow ">{price} $</p>
           </div>
-          <Counter />
+          <div className="mb-4">
+            <Counter />
+          </div>
         </div>
       </div>
     </div>
