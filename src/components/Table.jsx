@@ -4,13 +4,16 @@ import useFetch from './hooks/UseFetch';
 import CategoryList from './Category/CategoryList';
 
 const Table = (props) => {
-  const { data } = useFetch('https://fakestoreapi.com/products');
+  const [category, setCategory] = useState('');
+  // TODO сделать передачу категории и повторить запрос
+  const { data } = useFetch(`https://fakestoreapi.com/products${category}`);
   const [cards, setCards] = useState([]);
   useEffect(() => {
     setCards(data);
   }, [data]);
 
   if (cards) {
+    console.log(cards);
     return (
       <div>
         <CategoryList classes="mt-5 " />

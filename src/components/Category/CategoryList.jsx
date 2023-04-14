@@ -7,6 +7,11 @@ const CategoryList = (props) => {
   //const [category, setCategory] = useState([]);
   const { data } = useFetch('https://fakestoreapi.com/products/categories');
   const [category, setCategory] = useState([]);
+  const [currentCategory, setCurrentCategory] = useState(null);
+
+  function getCurrentCategory(item) {
+    setCurrentCategory(item);
+  }
 
   useEffect(() => {
     setCategory(data);
@@ -15,9 +20,11 @@ const CategoryList = (props) => {
     return (
       <div className={props.classes}>
         <div className="flex flex-wrap gap-1">
-          <h2 className="text-2xl w-full">Категории:</h2>
+          <h2 className="text-2xl w-full">
+            Выбранная категория: {currentCategory}
+          </h2>
           {category.map((pr, i) => (
-            <Category name={pr} key={pr} />
+            <Category helper={getCurrentCategory} name={pr} key={pr} />
           ))}
         </div>
       </div>
