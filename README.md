@@ -1,4 +1,4 @@
-# Учбеный React App проект
+# Учебный React App проект(в процессе разработки, выполнен на 10%)
 ## Стэк: Js, React, Tailwind, Webpack
 
 This project was create with [Create React App](https://github.com/facebook/create-react-app).
